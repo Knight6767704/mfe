@@ -6,14 +6,11 @@ module.exports = withModuleFederationPlugin({
   exposes: {
     './Component': './projects/mfe2/src/app/app.component.ts',
   },
-  remotes: {
-    mfe1: 'mfe1@http://localhost:2000/remoteEntry.js',
-  },
   
   shared: {
-    '@angular/core': { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-    '@angular/common': { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-    '@angular/router': { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+    '@angular/core': { singleton: true, strictVersion: true, requiredVersion: '16.2.12' },
+    '@angular/common': { singleton: true, strictVersion: true, requiredVersion: '16.2.12' },
+    '@angular/router': { singleton: true, strictVersion: true, requiredVersion: '16.2.12' },
   },
   
   

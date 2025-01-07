@@ -7,7 +7,9 @@ module.exports = withModuleFederationPlugin({
     './Component': './projects/mfe1/src/app/app.component.ts',
   },
   shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+    '@angular/core': { singleton: true, strictVersion: true, requiredVersion: '16.2.12' },
+    '@angular/common': { singleton: true, strictVersion: true, requiredVersion: '16.2.12' },
+    '@angular/router': { singleton: true, strictVersion: true, requiredVersion: '16.2.12' },
   },
   
 });
