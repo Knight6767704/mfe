@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "projects/shell/src/index.html",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/shell"
+      }
+    },
+    {
+      "src": "projects/mfe1/src/index.html",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/mfe1"
+      }
+    },
+    {
+      "src": "projects/mfe2/src/index.html",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/mfe2"
+      }
+    }
+  ],
+  "buildCommand": "ng build --configuration=production --project=shell && ng build --configuration=production --project=mfe1 && ng build --configuration=production --project=mfe2",
+  "routes": [
+    {
+      "src": "/shell/(.*)",
+      "dest": "/dist/shell/$1"
+    },
+    {
+      "src": "/mfe1/(.*)",
+      "dest": "/dist/mfe1/$1"
+    },
+    {
+      "src": "/mfe2/(.*)",
+      "dest": "/dist/mfe2/$1"
+    }
+  ]
+}
