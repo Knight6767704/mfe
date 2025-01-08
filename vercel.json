@@ -2,21 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "projects/shell/src/index.html",
+      "src": "projects/shell/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist/shell"
       }
     },
     {
-      "src": "projects/mfe1/src/index.html",
+      "src": "projects/mfe1/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist/mfe1"
       }
     },
     {
-      "src": "projects/mfe2/src/index.html",
+      "src": "projects/mfe2/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist/mfe2"
